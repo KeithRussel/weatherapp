@@ -32,10 +32,18 @@ button.btn:hover {
   background-color: #3e95da;
 }
 
+.centralize {
+  margin-top: 65px;
+}
+
 .results {
+  width: 50%;
+  margin: auto;
   background-color: #d9edff;
   padding: 15px;
   box-shadow: 0px 0px 15px 5px #23587163;
+  /* background: url('https://source.unsplash.com/random/450x450');
+  background-size: cover; */
 }
 
 .results .right {
@@ -56,5 +64,18 @@ button.btn:hover {
 
 .weather-img {
   box-shadow: 0px 0px 10px 2px #23587163;
-  border: 1px solid #00000057;
+  /* border: 1px solid #00000057; */
+  background-color: #558cd3;
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 920px) {
+  .nav-wrapper .brand-logo {
+    bottom: -20px;
+  }
+
+  .results {
+    width: 100%;
+    margin: auto;
+  }
 }

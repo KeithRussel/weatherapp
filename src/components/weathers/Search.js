@@ -10,6 +10,7 @@ const Search = () => {
     e.preventDefault();
 
     weatherContext.searchCity(text);
+    weatherContext.forecastCity(text);
     setText('');
   };
 

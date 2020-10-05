@@ -10,17 +10,27 @@ const WeatherDetails = () => {
   } = weatherContext;
 
   const dateObj = new Date(dt * 1000);
-  let timeString = dateObj.toLocaleString();
+  let timeString = dateObj.toLocaleString('en-us', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+  });
 
   return (
-    <div className={name ? 'results' : null}>
+    <div
+      className={name ? 'results' : null}
+      style={{ background: 'https://source.unsplash.com/random/450x450' }}
+    >
       {dt ? (
         <span className='right' style={{ fontSize: '14px' }}>
           {timeString}
         </span>
       ) : null}
       {name ? (
-        <h2 className='center'>
+        <h2>
           {name}
           {sys ? <span>, {sys.country}</span> : null}
         </h2>

@@ -7,7 +7,7 @@ const Navbar = () => {
     <nav>
       <div className='nav-wrapper'>
         <Link to='#' className='brand-logo center'>
-          <img src={Logo} width='70' height='70' />
+          <img src={Logo} width='70' height='70' alt='weatherResult' />
         </Link>
       </div>
     </nav>

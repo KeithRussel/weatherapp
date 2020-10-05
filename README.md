@@ -18,6 +18,10 @@ npm start #run client side localhost
 
 axios, materializecss
 
+### Notes
+
+decided to remove updates of forecast details because of API not allowing it in free subscription plan.
+
 ## Credits
 
 API Openweathermap

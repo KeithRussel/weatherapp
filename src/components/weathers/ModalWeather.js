@@ -5,7 +5,7 @@ import WeatherContext from '../context/weatherContext';
 const ModalWeather = () => {
   const weatherContext = useContext(WeatherContext);
 
-  const { searchCity } = weatherContext;
+  const { searchCity, forecastCity } = weatherContext;
 
   useEffect(() => {
     M.AutoInit();
@@ -21,13 +21,16 @@ const ModalWeather = () => {
       const elems = document.querySelectorAll('.modal');
       const instances = M.Modal.init(elems, options);
     });
+    // console.log(defaultCity());
+    // eslint-disable-next-line
   }, []);
 
-  const [text, setText] = useState('Cebu');
+  const [text, setText] = useState();
 
   const onSubmit = (e) => {
     e.preventDefault();
     searchCity(text);
+    forecastCity(text);
 
     setText('');
   };
@@ -52,7 +55,7 @@ const ModalWeather = () => {
               type='text'
               onChange={onChange}
               className='validate'
-              value={text}
+              value={text || ''}
             />
             {/* <label htmlFor='city_name'>City Name</label> */}
             <button
