@@ -2,6 +2,8 @@
 
 Use to check the weather updates base on the location you want.
 
+![](weather.gif)
+
 ## Installation
 
 ```bash
