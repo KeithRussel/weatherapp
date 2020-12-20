@@ -1,6 +1,7 @@
 # Simple Weather App
 
 Use to check the weather updates base on the location you want.
+[sample link](https://weathertrackerapp.netlify.app/)
 
 ![](weather.gif)
 
